@@ -1,5 +1,10 @@
-
-
+/** 
+ * Copyright© Benjamin Kyd 2019
+ *     fn_commandHandler.sqf
+ *
+ *  Handles command input from keyHandler and calls the registered
+ * command if it exists
+ */
 
 systemChat "Chat Key pressed";
 
