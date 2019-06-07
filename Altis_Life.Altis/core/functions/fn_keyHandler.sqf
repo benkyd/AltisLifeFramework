@@ -54,6 +54,21 @@ if (life_container_active) then {
     true;
 };
 
+// Chat commands
+if (inputAction "Chat" > 0) then
+{
+    systemChat "Chat Opened";
+
+    chatCommandSpawn = [] spawn
+    {
+        systemChat "Spawned event handler";
+
+        waitUntil {shownChat};
+        waitUntil {!isNull (finddisplay 24 displayctrl 101)};
+        chatCommandEventH = (findDisplay 24) displayAddEventHandler["KeyDown","_this call life_fnc_commandHandler"]; 
+    };
+};
+
 switch (_code) do {
     // -- Disable commander/tactical view
     if (LIFE_SETTINGS(getNumber,"disableCommanderView") isEqualTo 1) then {

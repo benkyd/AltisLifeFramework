@@ -195,6 +195,7 @@ class Life_Client_Core {
         class inventoryOpened {};
         class isUIDActive {};
         class keyHandler {};
+        class commandHandler {};
         class loadDeadGear {};
         class loadGear {};
         class nearATM {};
